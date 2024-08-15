@@ -37,6 +37,11 @@ pipeline {
             }
         }
         stage ('DeployToProd') {
+            input {
+                message "Ready to deploy in prod ?"
+                ok 'yes'
+                submitter 'divya'
+            }
             steps {
                 echo "****Building the application******"
             }
