@@ -1,0 +1,45 @@
+pipeline {
+    agent any
+    stages {
+        stage ('Build') {
+            steps {
+                echo "****Building the application******"
+            }
+        }
+        stage ('Sonar') {
+            steps {
+                echo "****Building the application******"
+            }
+        }
+        stage ('DockerBuild') {
+            steps {
+                echo "****Building the container application******"
+            }
+        }
+        stage ('DockerPush') {
+            steps {
+                echo "****Pushing the image******"
+            }
+        }
+        stage ('DeployToDev')  {
+            steps {
+                echo "****Deploying the application to Dev env******"
+            }
+        }
+        stage ('DeployToTest'){
+            steps {
+                echo "****Deploying the application to Test env******"
+            }
+        }
+        stage ('DeployToStage')  {
+            steps {
+                echo "****Deploying the application to Stage env******"
+            }
+        }
+        stage ('DeployToProd') {
+            steps {
+                echo "****Building the application******"
+            }
+        }
+    }
+}
